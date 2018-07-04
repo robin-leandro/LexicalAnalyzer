@@ -1,0 +1,91 @@
+package cr.ac.ucr.ci1322;
+import java_cup.runtime.Symbol;
+import java_cup.runtime.ComplexSymbolFactory;
+import java_cup.runtime.ComplexSymbolFactory.ComplexSymbol;
+
+parser code {:
+    private Integer globals     = 0;
+    private Integer procedures  = 0;
+    private Integer errors      = 0;
+    private final long startMillis = System.currentTimeMillis();
+
+    private void printParseFinish()
+    {
+        long durationMillis = System.currentTimeMillis() - startMillis;
+        int lexerErrors = 0;
+        java_cup.runtime.Scanner scanner = getScanner();
+        if (scanner instanceof LexicalAnalyzer) {
+            lexerErrors = ((LexicalAnalyzer)scanner).getErrors();
+        }
+        int totalErrors = lexerErrors + errors;
+        if (totalErrors == 0) {
+            System.out.println("Parse Completo, Buen Trabajo!");
+        } else {
+            System.out.println("Errores Encontrados");
+        }
+        System.out.println("====================================");
+        System.out.println("Numero de Globales:       " + globals);
+        System.out.println("Numero de Procedimientos: " + procedures);
+        System.out.println("Numero de Errores:        " + totalErrors);
+        if (totalErrors != 0) {
+            System.out.println("Errores Lexicos:          " + lexerErrors);
+            System.out.println("Errores Sintacticos:      " + errors);
+        }
+        System.out.format("Tiempo de Parsing:        %.3f s\n", durationMillis * 0.001);
+        System.out.println("====================================");
+    }
+
+    @Override
+    public void unrecovered_syntax_error(Symbol cur_symbol) throws java.lang.Exception
+    {
+        if (cur_token instanceof ComplexSymbol) {
+            ComplexSymbol complexSymbol = (ComplexSymbol) cur_token;
+            int line = complexSymbol.getLeft().getLine();
+            int column = complexSymbol.getLeft().getColumn();
+            System.out.println("No se pudo recuperar el error del simbolo \"" +
+                ErrorReporter.getIdName(complexSymbol.sym) +
+                "\" en linea " + line + ", columna " + column);
+        } else {
+            super.unrecovered_syntax_error(cur_token);
+        }
+    }
+
+    @Override
+    public void syntax_error(Symbol cur_token) {
+        if (cur_token instanceof ComplexSymbol) {
+            ErrorReporter.syntaxError((ComplexSymbol) cur_token, expected_token_ids());
+        } else {
+            super.syntax_error(cur_token);
+        }
+    }
+
+    private Symbol newSymbol(int terminal, Location left, Location right, Object val) {
+        if (symbolFactory instanceof ComplexSymbolFactory) {
+            ComplexSymbolFactory csf = (ComplexSymbolFactory) symbolFactory;
+            return csf.newSymbol(Terminal.terminalNames[terminal], terminal, left, right, val);
+        } else {
+            return symbolFactory.newSymbol(Terminal.terminalNames[terminal], terminal, val);
+        }
+    }
+:};
+
+terminal Integer        T_INTEGER;
+terminal String         T_IDENTIFIER;
+terminal                T_READ;
+terminal                T_PRINT;
+terminal                T_EQUALS;
+terminal                T_NEWLINES;
+terminal                T_LEFT_PARENTHESIS;
+terminal                T_RIGHT_PARENTHESIS;
+
+non terminal            N_ROOT;
+
+
+
+start with N_ROOT;
+
+
+N_ROOT                  ::= T_INTEGER:intA T_INTEGER:intB
+                            {:
+                                System.out.println(intA+intB);
+                            :};
