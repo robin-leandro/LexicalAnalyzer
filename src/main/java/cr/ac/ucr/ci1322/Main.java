@@ -24,7 +24,7 @@ public class Main {
 
                 CodeGenerator.generateCode(syntacticAnalyzer.getParseTree(),SemanticAnalyzer.analyze(syntacticAnalyzer.getParseTree()));
 
-                System.out.println("Done compiling! Your executable MIPS file is called printrOutput.s\nHere's a tree representation of your code:\n"+syntacticAnalyzer.getParseTree().toString());
+                //System.out.println("Done compiling! Your executable MIPS file is called printrOutput.s\nHere's a tree representation of your code:\n"+syntacticAnalyzer.getParseTree().toString());
 
 
             } catch(FileNotFoundException e) {

@@ -18,10 +18,18 @@ public final class SemanticAnalyzer {
             if (currentNode.isNonTerminal()) {
 
                 if (currentNode.getPrintrSymbol().getNonTerminal() == NonTerminal.N_PRINT_INSTRUCTION)
-                    analyzePrintInstruction(currentNode);
+                    try {
+                        analyzePrintInstruction(currentNode);
+                    } catch (SemanticErrorException e) {
+                        e.printStackTrace();
+                    }
 
                 else if (currentNode.getPrintrSymbol().getNonTerminal() == NonTerminal.N_READ_INSTRUCTION)
-                    analyzeReadInstruction(currentNode);
+                    try {
+                        analyzeReadInstruction(currentNode);
+                    } catch (SemanticErrorException e) {
+                        e.printStackTrace();
+                    }
             }
         }
         return  alreadyDeclaredVariables;
@@ -42,15 +50,18 @@ public final class SemanticAnalyzer {
      * @param readNode the node that holds all the metadata related to a read instruction
      */
     private static void analyzeReadInstruction(Node readNode) {
+        LinkedList<String> variablesToBeDeclared = new LinkedList<>();
+        for(Node declarationNode:readNode.getChildren().getFirst().getChildren())
+            variablesToBeDeclared.add((String)declarationNode.getPrintrSymbol().getTerminal().value);
+
+        // Add the declared variables to the list
+        alreadyDeclaredVariables.addAll(variablesToBeDeclared);
+
+        int declaredVariables = variablesToBeDeclared.size();
+
         int numberInParenthesis = (Integer)readNode.getChildren().get(1).getPrintrSymbol().getTerminal().value;
         if(numberInParenthesis < 1 || numberInParenthesis > 6)
             throw new SemanticErrorException("The read instruction may only receive numbers between 1 and 5");
-
-        LinkedList<String> variablesToBeDeclared = new LinkedList<>();
-        for(Node declarationNode:readNode.getChildren().getFirst().getChildren())
-                variablesToBeDeclared.add((String)declarationNode.getPrintrSymbol().getTerminal().value);
-
-        int declaredVariables = variablesToBeDeclared.size();
 
         // If they don't match, throw an exception
         if(declaredVariables != numberInParenthesis) {
@@ -61,9 +72,6 @@ public final class SemanticAnalyzer {
                 errorString += "\n  "+variableToBeDeclared;
             throw new SemanticErrorException(errorString);
         }
-
-        // If they match, add the declared variables to the list
-        alreadyDeclaredVariables.addAll(variablesToBeDeclared);
     }
 
 
