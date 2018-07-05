@@ -1,5 +1,8 @@
 package cr.ac.ucr.ci1322;
 
+import cr.ac.ucr.ci1322.exceptions.LexicalErrorException;
+import cr.ac.ucr.ci1322.exceptions.SemanticErrorException;
+import cr.ac.ucr.ci1322.exceptions.SyntacticErrorException;
 import java_cup.runtime.ComplexSymbolFactory;
 
 import java.io.FileNotFoundException;
@@ -18,8 +21,19 @@ public class Main {
                 LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(sourceCode, symbolFactory);
                 SyntacticAnalyzer syntacticAnalyzer = new SyntacticAnalyzer(lexicalAnalyzer, symbolFactory);
                 syntacticAnalyzer.parse();
+                //System.out.println(syntacticAnalyzer.getParseTree().toString());
+
+                SemanticAnalyzer.analyze(syntacticAnalyzer.getParseTree());
+
+
             } catch(FileNotFoundException e) {
                 System.out.println("Could not find "+args[0]);
+            } catch(LexicalErrorException e) {
+                e.printStackTrace();
+            } catch(SyntacticErrorException e) {
+                e.printStackTrace();
+            } catch (SemanticErrorException e) {
+                e.printStackTrace();
             } catch(Exception e) {
                 e.printStackTrace();
             }

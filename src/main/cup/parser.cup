@@ -1,62 +1,38 @@
 package cr.ac.ucr.ci1322;
+
+import cr.ac.ucr.ci1322.exceptions.SyntacticErrorException;
+
 import java_cup.runtime.Symbol;
 import java_cup.runtime.ComplexSymbolFactory;
 import java_cup.runtime.ComplexSymbolFactory.ComplexSymbol;
+import java.util.LinkedList;
 
 parser code {:
-    private Integer globals     = 0;
-    private Integer procedures  = 0;
-    private Integer errors      = 0;
-    private final long startMillis = System.currentTimeMillis();
+    private ParseTree parseTree;
 
-    private void printParseFinish()
-    {
-        long durationMillis = System.currentTimeMillis() - startMillis;
-        int lexerErrors = 0;
-        java_cup.runtime.Scanner scanner = getScanner();
-        if (scanner instanceof LexicalAnalyzer) {
-            lexerErrors = ((LexicalAnalyzer)scanner).getErrors();
-        }
-        int totalErrors = lexerErrors + errors;
-        if (totalErrors == 0) {
-            System.out.println("Parse Completo, Buen Trabajo!");
-        } else {
-            System.out.println("Errores Encontrados");
-        }
-        System.out.println("====================================");
-        System.out.println("Numero de Globales:       " + globals);
-        System.out.println("Numero de Procedimientos: " + procedures);
-        System.out.println("Numero de Errores:        " + totalErrors);
-        if (totalErrors != 0) {
-            System.out.println("Errores Lexicos:          " + lexerErrors);
-            System.out.println("Errores Sintacticos:      " + errors);
-        }
-        System.out.format("Tiempo de Parsing:        %.3f s\n", durationMillis * 0.001);
-        System.out.println("====================================");
+    public ParseTree getParseTree() {
+        return parseTree;
     }
 
     @Override
     public void unrecovered_syntax_error(Symbol cur_symbol) throws java.lang.Exception
     {
-        if (cur_token instanceof ComplexSymbol) {
-            ComplexSymbol complexSymbol = (ComplexSymbol) cur_token;
-            int line = complexSymbol.getLeft().getLine();
-            int column = complexSymbol.getLeft().getColumn();
-            System.out.println("No se pudo recuperar el error del simbolo \"" +
-                ErrorReporter.getIdName(complexSymbol.sym) +
-                "\" en linea " + line + ", columna " + column);
-        } else {
-            super.unrecovered_syntax_error(cur_token);
-        }
+        if (cur_token.value==null && cur_token instanceof ComplexSymbol)
+            throw new SyntacticErrorException("unexpected token: \""+((ComplexSymbol)cur_token).getName()+"\".");
+        else if(cur_token.value==null)
+            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.toString()+"\".");
+        else
+            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.value+"\".");
     }
 
     @Override
     public void syntax_error(Symbol cur_token) {
-        if (cur_token instanceof ComplexSymbol) {
-            ErrorReporter.syntaxError((ComplexSymbol) cur_token, expected_token_ids());
-        } else {
-            super.syntax_error(cur_token);
-        }
+        if (cur_token.value==null && cur_token instanceof ComplexSymbol)
+            throw new SyntacticErrorException("unexpected token: \""+((ComplexSymbol)cur_token).getName()+"\".");
+        else if(cur_token.value==null)
+            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.toString()+"\".");
+        else
+            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.value+"\".");
     }
 
     private Symbol newSymbol(int terminal, Location left, Location right, Object val) {
@@ -69,23 +45,110 @@ parser code {:
     }
 :};
 
-terminal Integer        T_INTEGER;
-terminal String         T_IDENTIFIER;
-terminal                T_READ;
-terminal                T_PRINT;
-terminal                T_EQUALS;
-terminal                T_NEWLINES;
-terminal                T_LEFT_PARENTHESIS;
-terminal                T_RIGHT_PARENTHESIS;
+terminal Integer        				T_INTEGER;
+terminal String         				T_IDENTIFIER;
+terminal                				T_READ;
+terminal                				T_PRINT;
+terminal                				T_EQUALS;
+terminal                				T_NEWLINES;
+terminal                				T_LEFT_PARENTHESIS;
+terminal                				T_RIGHT_PARENTHESIS;
+terminal                				T_COMMA;
 
-non terminal            N_ROOT;
+
+non terminal Node       				N_ROOT;
+non terminal LinkedList<Node>       	N_INSTRUCTIONS;
+non terminal Node       				N_INSTRUCTION;
+non terminal Node       				N_READ_INSTRUCTION;
+non terminal Node       				N_PRINT_INSTRUCTION;
+non terminal Node            			N_PRIME_VARIABLES_DECLARATION;
+non terminal LinkedList<Node>           N_VARIABLES_DECLARATION;
 
 
 
 start with N_ROOT;
 
-
-N_ROOT                  ::= T_INTEGER:intA T_INTEGER:intB
+N_ROOT                  ::= N_INSTRUCTIONS:instructions T_NEWLINES
                             {:
-                                System.out.println(intA+intB);
+                                Node root = new Node(NonTerminal.N_ROOT);
+                                root.setChildren(instructions);
+                                parseTree = new ParseTree(root);
                             :};
+
+N_INSTRUCTIONS          ::= N_INSTRUCTIONS:instructions T_NEWLINES N_INSTRUCTION:instruction
+                            {:
+                                // Set RESULT as the already-instantiated list of nodes and add the newest instruction
+                                RESULT = instructions;
+                                RESULT.add(instruction);
+
+                            :}
+                            | N_INSTRUCTION:instruction
+                            {:
+                                // Create the list that will be passed, this definition is only used once and is where
+                                // the linked list is instantiated
+                                RESULT = new LinkedList<Node>();
+
+                                // Add the instruction to the lsit
+                                RESULT.add(instruction);
+                            :};
+
+N_INSTRUCTION           ::= N_READ_INSTRUCTION:readInstruction
+                            {:
+                                RESULT = readInstruction;
+                            :}
+                            | N_PRINT_INSTRUCTION:printInstruction
+                            {:
+                                RESULT = printInstruction;
+                            :};
+
+N_READ_INSTRUCTION      ::= N_PRIME_VARIABLES_DECLARATION:variablesDeclaration T_EQUALS T_READ T_LEFT_PARENTHESIS T_INTEGER:readQuantity T_RIGHT_PARENTHESIS
+                            {:
+                                // Create the node
+                                RESULT = new Node(NonTerminal.N_READ_INSTRUCTION);
+
+                                // Add the declarations as children
+                                RESULT.addChild(variablesDeclaration);
+
+                                // Create the node to hold the read quantity
+                                Node quantityNode = new Node(Terminal.T_INTEGER,readQuantity);
+
+                                // Set the created quantity node as child of result
+                                RESULT.addChild(quantityNode);
+                            :};
+
+N_PRIME_VARIABLES_DECLARATION ::= N_VARIABLES_DECLARATION:variablesDeclaration
+                            {:
+                                RESULT = new Node(NonTerminal.N_VARIABLES_DECLARATION);
+                                RESULT.setChildren(variablesDeclaration);
+                            :};
+
+N_VARIABLES_DECLARATION ::= N_VARIABLES_DECLARATION:variablesDeclaration T_COMMA T_IDENTIFIER:identifier
+                            {:
+                                // Create a node to hold the newest declaration
+                                Node newDeclaration = new Node(Terminal.T_IDENTIFIER, identifier);
+
+                                // Set RESULT as the list ot be returned and add the newest declaration
+                                RESULT = variablesDeclaration;
+                                RESULT.add(newDeclaration);
+                            :}
+                            | T_IDENTIFIER:identifier
+                            {:
+                                // Create the list that will be passed, this definition is only used once and is where
+                                // the linked list is instantiated
+                                RESULT = new LinkedList<Node>();
+
+                                // Create a node to hold the string
+                                Node identifierNode = new Node(Terminal.T_IDENTIFIER,identifier);
+
+                                // Add the created identifier node to the list
+                                RESULT.add(identifierNode);
+                            :};
+
+N_PRINT_INSTRUCTION     ::= T_PRINT T_IDENTIFIER:identifier
+                            {:
+                                Node identifierNode = new Node(Terminal.T_IDENTIFIER, identifier);
+                                RESULT = new Node(NonTerminal.N_PRINT_INSTRUCTION);
+                                RESULT.addChild(identifierNode);
+                            :};
+
+

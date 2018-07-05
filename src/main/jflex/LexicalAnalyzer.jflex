@@ -2,6 +2,8 @@
 
 package cr.ac.ucr.ci1322;
 
+import cr.ac.ucr.ci1322.exceptions.LexicalErrorException;
+
 import java_cup.runtime.ComplexSymbolFactory;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 import java_cup.runtime.Symbol;
@@ -80,9 +82,10 @@ print       = print
     "="                             {return symbol(Terminal.T_EQUALS);}
     "("                             {return symbol(Terminal.T_LEFT_PARENTHESIS);}
     ")"                             {return symbol(Terminal.T_RIGHT_PARENTHESIS);}
+    ","                             {return symbol(Terminal.T_COMMA);}
     " "                             {;}
     {newlines}                      {return symbol(Terminal.T_NEWLINES);}
-    [^]                 { ++errors; ErrorReporter.lexicalError(yytext(), yyline + 1, yycolumn); }
+    [^]                             { throw new LexicalErrorException("unexpected token: \""+yytext()+"\".");}
 }
 
-[^]                 { ++errors; ErrorReporter.lexicalError(yytext(), yyline + 1, yycolumn); }
+[^]                                 { throw new LexicalErrorException("unexpected token: \""+yytext()+"\".");}

@@ -14,6 +14,7 @@ public interface Terminal {
   public static final int T_NEWLINES = 7;
   public static final int T_EQUALS = 6;
   public static final int EOF = 0;
+  public static final int T_COMMA = 10;
   public static final int T_PRINT = 5;
   public static final int T_READ = 4;
   public static final int T_LEFT_PARENTHESIS = 8;
@@ -28,7 +29,8 @@ public interface Terminal {
   "T_EQUALS",
   "T_NEWLINES",
   "T_LEFT_PARENTHESIS",
-  "T_RIGHT_PARENTHESIS"
+  "T_RIGHT_PARENTHESIS",
+  "T_COMMA"
   };
 }
 
