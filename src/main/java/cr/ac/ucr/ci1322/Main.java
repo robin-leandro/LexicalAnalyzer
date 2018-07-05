@@ -7,6 +7,7 @@ import java_cup.runtime.ComplexSymbolFactory;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.LinkedList;
 
 public class Main {
 
@@ -22,10 +23,12 @@ public class Main {
                 SyntacticAnalyzer syntacticAnalyzer = new SyntacticAnalyzer(lexicalAnalyzer, symbolFactory);
                 syntacticAnalyzer.parse();
 
-                CodeGenerator.generateCode(syntacticAnalyzer.getParseTree(),SemanticAnalyzer.analyze(syntacticAnalyzer.getParseTree()));
+                LinkedList<String> declaredVariables = SemanticAnalyzer.analyze(syntacticAnalyzer.getParseTree());
 
-                //System.out.println("Done compiling! Your executable MIPS file is called printrOutput.s\nHere's a tree representation of your code:\n"+syntacticAnalyzer.getParseTree().toString());
-
+                if(lexicalAnalyzer.isOk() && syntacticAnalyzer.isOk() && SemanticAnalyzer.isOk()) {
+                    CodeGenerator.generateCode(syntacticAnalyzer.getParseTree(),declaredVariables);
+                    System.out.println("Done compiling! Your executable MIPS file is called printrOutput.s\nHere's a tree representation of your code:\n"+syntacticAnalyzer.getParseTree().toString());
+                }
 
             } catch(FileNotFoundException e) {
                 System.out.println("Could not find "+args[0]);

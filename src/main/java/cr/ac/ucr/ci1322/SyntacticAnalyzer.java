@@ -114,6 +114,11 @@ public class SyntacticAnalyzer extends java_cup.runtime.lr_parser {
 
 
     private ParseTree parseTree;
+    private boolean ok = true;
+
+    public boolean isOk(){
+        return ok;
+    }
 
     public ParseTree getParseTree() {
         return parseTree;
@@ -122,22 +127,24 @@ public class SyntacticAnalyzer extends java_cup.runtime.lr_parser {
     @Override
     public void unrecovered_syntax_error(Symbol cur_symbol) throws java.lang.Exception
     {
+        ok = false;
         if (cur_token.value==null && cur_token instanceof ComplexSymbol)
-            throw new SyntacticErrorException("unexpected token: \""+((ComplexSymbol)cur_token).getName()+"\".");
+		    System.out.println("Unrecovered syntactic Error: unexpected token \""+((ComplexSymbol)cur_token).getName()+"\".");
         else if(cur_token.value==null)
-            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.toString()+"\".");
+            System.out.println("Unrecovered syntactic Error: unexpected token \""+(String)cur_token.toString()+"\".");
         else
-            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.value+"\".");
+            System.out.println("Unrecovered syntactic Error: unexpected token \""+(String)cur_token.value+"\".");
     }
 
     @Override
     public void syntax_error(Symbol cur_token) {
+        ok = false;
         if (cur_token.value==null && cur_token instanceof ComplexSymbol)
-            throw new SyntacticErrorException("unexpected token: \""+((ComplexSymbol)cur_token).getName()+"\".");
+    		System.out.println("Syntactic Error: unexpected token \""+((ComplexSymbol)cur_token).getName()+"\".");
         else if(cur_token.value==null)
-            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.toString()+"\".");
+            System.out.println("Syntactic Error: unexpected token \""+(String)cur_token.toString()+"\".");
         else
-            throw new SyntacticErrorException("unexpected token: \""+(String)cur_token.value+"\".");
+            System.out.println("Syntactic Error: unexpected token \""+(String)cur_token.value+"\".");
     }
 
     private Symbol newSymbol(int terminal, Location left, Location right, Object val) {

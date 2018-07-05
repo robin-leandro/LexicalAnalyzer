@@ -81,6 +81,9 @@ public class CodeGenerator {
      * @param declaredVariables
      */
     private static void writeDeclaredVariables(LinkedList<String> declaredVariables){
+        if(declaredVariables==null)
+            return;
+
         for(String variable:declaredVariables)
             mipsLines.add(variable+variableDeclarationTemplate);
     }

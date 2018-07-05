@@ -29,7 +29,7 @@ import java_cup.runtime.Symbol;
     // string literal
     private StringBuilder string = new StringBuilder();
     private ComplexSymbolFactory symbolFact;
-    private int errors;
+    private boolean ok = true;
 
     public LexicalAnalyzer(java.io.Reader in, ComplexSymbolFactory sf) {
         this(in);
@@ -62,8 +62,8 @@ import java_cup.runtime.Symbol;
         return symbol(Terminal.error,"LEXICAL ERROR: "+ value + " isn't a valid " + errtype + ", error on line("+ yyline + "), column(" + yycolumn+")");
     }
 
-    public int getErrors() {
-        return errors;
+    public boolean isOk() {
+        return ok;
     }
 %}
 
@@ -85,7 +85,7 @@ print       = print
     ","                             {return symbol(Terminal.T_COMMA);}
     " "                             {;}
     {newlines}                      {return symbol(Terminal.T_NEWLINES);}
-    [^]                             { throw new LexicalErrorException("unexpected token: \""+yytext()+"\".");}
+    [^]                             { System.out.println("Lexical error: unknown token "+yytext());ok=false;}
 }
 
-[^]                                 { throw new LexicalErrorException("unexpected token: \""+yytext()+"\".");}
+[^]                                 { System.out.println("Lexical error: unknown token "+yytext());ok=false;}

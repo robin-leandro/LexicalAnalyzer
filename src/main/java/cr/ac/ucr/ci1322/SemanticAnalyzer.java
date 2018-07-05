@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 public final class SemanticAnalyzer {
     private static LinkedList<String> alreadyDeclaredVariables;
+    private static boolean ok = true;
 
     private SemanticAnalyzer(ParseTree parseTree) {}
 
@@ -14,6 +15,10 @@ public final class SemanticAnalyzer {
      */
     public static LinkedList<String> analyze(ParseTree parseTree) {
         alreadyDeclaredVariables = new LinkedList<>();
+
+        if(parseTree==null||parseTree.getRoot()==null||parseTree.getRoot().getChildren()==null)
+            return null;
+
         for (Node currentNode : parseTree.getRoot().getChildren()) {
             if (currentNode.isNonTerminal()) {
 
@@ -41,8 +46,10 @@ public final class SemanticAnalyzer {
      */
     private static void analyzePrintInstruction(Node printNode) {
         String variableName = (String)printNode.getChildren().getFirst().getPrintrSymbol().getTerminal().value;
-        if(!alreadyDeclaredVariables.contains(variableName))
-            throw new SemanticErrorException("undeclared variable "+variableName);
+        if(!alreadyDeclaredVariables.contains(variableName)) {
+            ok = false;
+            System.out.println("Semantic error: undeclared variable " + variableName);
+        }
     }
 
     /**
@@ -60,19 +67,25 @@ public final class SemanticAnalyzer {
         int declaredVariables = variablesToBeDeclared.size();
 
         int numberInParenthesis = (Integer)readNode.getChildren().get(1).getPrintrSymbol().getTerminal().value;
-        if(numberInParenthesis < 1 || numberInParenthesis > 6)
-            throw new SemanticErrorException("The read instruction may only receive numbers between 1 and 5");
+        if(numberInParenthesis < 1 || numberInParenthesis > 6) {
+            ok = false;
+            System.out.println("Semantic error: the read instruction may only receive numbers between 1 and 5");
+        }
 
         // If they don't match, throw an exception
         if(declaredVariables != numberInParenthesis) {
+            ok = false;
+
             String errorString = "amount of declared variables does not match amount to be read"
                     +"\nAmount of variables to be read: "+numberInParenthesis
                     +"\nAmount of declared variables: "+declaredVariables;
             for(String variableToBeDeclared:variablesToBeDeclared)
                 errorString += "\n  "+variableToBeDeclared;
-            throw new SemanticErrorException(errorString);
+            System.out.println("Semantic error: "+errorString);
         }
     }
 
-
+    public static boolean isOk() {
+        return ok;
+    }
 }

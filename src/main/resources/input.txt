@@ -1,6 +1,6 @@
-uno, dos, tres, cuatro = read(0)
+uno, dos, tres, cuatro = read(4)
 
-print diez
+
 print cuatro
 
 cinco,seis,siete = read(3)
