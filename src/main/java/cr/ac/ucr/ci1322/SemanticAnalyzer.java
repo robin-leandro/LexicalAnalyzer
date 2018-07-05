@@ -12,7 +12,7 @@ public final class SemanticAnalyzer {
     /**
      * Travels the tree's frist level, analyzing each instruction type (read/print) appropriately
      */
-    public static void analyze(ParseTree parseTree) {
+    public static LinkedList<String> analyze(ParseTree parseTree) {
         alreadyDeclaredVariables = new LinkedList<>();
         for (Node currentNode : parseTree.getRoot().getChildren()) {
             if (currentNode.isNonTerminal()) {
@@ -24,6 +24,7 @@ public final class SemanticAnalyzer {
                     analyzeReadInstruction(currentNode);
             }
         }
+        return  alreadyDeclaredVariables;
     }
 
     /**

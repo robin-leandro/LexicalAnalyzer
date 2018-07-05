@@ -21,9 +21,10 @@ public class Main {
                 LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(sourceCode, symbolFactory);
                 SyntacticAnalyzer syntacticAnalyzer = new SyntacticAnalyzer(lexicalAnalyzer, symbolFactory);
                 syntacticAnalyzer.parse();
-                //System.out.println(syntacticAnalyzer.getParseTree().toString());
 
-                SemanticAnalyzer.analyze(syntacticAnalyzer.getParseTree());
+                CodeGenerator.generateCode(syntacticAnalyzer.getParseTree(),SemanticAnalyzer.analyze(syntacticAnalyzer.getParseTree()));
+
+                System.out.println(syntacticAnalyzer.getParseTree().toString());
 
 
             } catch(FileNotFoundException e) {

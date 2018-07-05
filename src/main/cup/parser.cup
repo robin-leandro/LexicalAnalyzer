@@ -68,7 +68,13 @@ non terminal LinkedList<Node>           N_VARIABLES_DECLARATION;
 
 start with N_ROOT;
 
-N_ROOT                  ::= N_INSTRUCTIONS:instructions T_NEWLINES
+N_ROOT                  ::= N_INSTRUCTIONS:instructions
+                            {:
+                                Node root = new Node(NonTerminal.N_ROOT);
+                                root.setChildren(instructions);
+                                parseTree = new ParseTree(root);
+                            :}
+                            | N_INSTRUCTIONS:instructions T_NEWLINES
                             {:
                                 Node root = new Node(NonTerminal.N_ROOT);
                                 root.setChildren(instructions);

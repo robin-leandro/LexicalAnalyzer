@@ -796,7 +796,7 @@ public class LexicalAnalyzer implements java_cup.runtime.Scanner {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
-            { throw new LexicalErrorException("Lexical error: unexpected token \""+yytext()+"\".");
+            { throw new LexicalErrorException("unexpected token: \""+yytext()+"\".");
             }
           case 12: break;
           case 2: 

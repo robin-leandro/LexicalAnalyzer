@@ -1,4 +1,14 @@
-ornitorrinco, orden_66, es42 = read(3)
+uno, dos, tres, cuatro = read(4)
 
-print ornitorrinco
-print orden_66
+print uno
+print cuatro
+
+cinco,seis,siete = read(3)
+
+print siete
+print seis
+print cinco
+print cuatro
+print tres
+print dos
+print uno

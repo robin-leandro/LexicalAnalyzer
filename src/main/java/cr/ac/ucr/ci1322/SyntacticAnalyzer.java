@@ -36,10 +36,10 @@ public class SyntacticAnalyzer extends java_cup.runtime.lr_parser {
   /** Production table. */
   protected static final short _production_table[][] = 
     unpackFromStrings(new String[] {
-    "\000\013\000\002\002\004\000\002\002\004\000\002\003" +
-    "\005\000\002\003\003\000\002\004\003\000\002\004\003" +
-    "\000\002\005\010\000\002\007\003\000\002\010\005\000" +
-    "\002\010\003\000\002\006\004" });
+    "\000\014\000\002\002\004\000\002\002\003\000\002\002" +
+    "\004\000\002\003\005\000\002\003\003\000\002\004\003" +
+    "\000\002\004\003\000\002\005\010\000\002\007\003\000" +
+    "\002\010\005\000\002\010\003\000\002\006\004" });
 
   /** Access to production table. */
   public short[][] production_table() {return _production_table;}
@@ -47,17 +47,18 @@ public class SyntacticAnalyzer extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\025\000\006\005\012\007\013\001\002\000\004\011" +
-    "\026\001\002\000\004\010\021\001\002\000\004\011\ufffe" +
-    "\001\002\000\006\010\ufffa\014\017\001\002\000\004\011" +
-    "\ufffc\001\002\000\004\002\016\001\002\000\006\010\ufff8" +
-    "\014\ufff8\001\002\000\004\005\015\001\002\000\004\011" +
-    "\ufffd\001\002\000\004\011\ufff7\001\002\000\004\002\001" +
-    "\001\002\000\004\005\020\001\002\000\006\010\ufff9\014" +
-    "\ufff9\001\002\000\004\006\022\001\002\000\004\012\023" +
-    "\001\002\000\004\004\024\001\002\000\004\013\025\001" +
-    "\002\000\004\011\ufffb\001\002\000\010\002\000\005\012" +
-    "\007\013\001\002\000\004\011\uffff\001\002" });
+    "\000\025\000\006\005\012\007\013\001\002\000\006\002" +
+    "\000\011\026\001\002\000\004\010\021\001\002\000\006" +
+    "\002\ufffd\011\ufffd\001\002\000\006\010\ufff9\014\017\001" +
+    "\002\000\006\002\ufffb\011\ufffb\001\002\000\004\002\016" +
+    "\001\002\000\006\010\ufff7\014\ufff7\001\002\000\004\005" +
+    "\015\001\002\000\006\002\ufffc\011\ufffc\001\002\000\006" +
+    "\002\ufff6\011\ufff6\001\002\000\004\002\001\001\002\000" +
+    "\004\005\020\001\002\000\006\010\ufff8\014\ufff8\001\002" +
+    "\000\004\006\022\001\002\000\004\012\023\001\002\000" +
+    "\004\004\024\001\002\000\004\013\025\001\002\000\006" +
+    "\002\ufffa\011\ufffa\001\002\000\010\002\uffff\005\012\007" +
+    "\013\001\002\000\006\002\ufffe\011\ufffe\001\002" });
 
   /** Access to parse-action table. */
   public short[][] action_table() {return _action_table;}
@@ -188,7 +189,23 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 1: // N_ROOT ::= N_INSTRUCTIONS T_NEWLINES 
+          case 1: // N_ROOT ::= N_INSTRUCTIONS 
+            {
+              Node RESULT =null;
+		Location instructionsxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
+		Location instructionsxright = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xright;
+		LinkedList<Node> instructions = (LinkedList<Node>)((java_cup.runtime.Symbol) CUP$SyntacticAnalyzer$stack.peek()).value;
+		
+                                Node root = new Node(NonTerminal.N_ROOT);
+                                root.setChildren(instructions);
+                                parseTree = new ParseTree(root);
+                            
+              CUP$SyntacticAnalyzer$result = parser.getSymbolFactory().newSymbol("N_ROOT",0, ((java_cup.runtime.Symbol)CUP$SyntacticAnalyzer$stack.peek()), ((java_cup.runtime.Symbol)CUP$SyntacticAnalyzer$stack.peek()), RESULT);
+            }
+          return CUP$SyntacticAnalyzer$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 2: // N_ROOT ::= N_INSTRUCTIONS T_NEWLINES 
             {
               Node RESULT =null;
 		Location instructionsxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.elementAt(CUP$SyntacticAnalyzer$top-1)).xleft;
@@ -204,7 +221,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 2: // N_INSTRUCTIONS ::= N_INSTRUCTIONS T_NEWLINES N_INSTRUCTION 
+          case 3: // N_INSTRUCTIONS ::= N_INSTRUCTIONS T_NEWLINES N_INSTRUCTION 
             {
               LinkedList<Node> RESULT =null;
 		Location instructionsxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.elementAt(CUP$SyntacticAnalyzer$top-2)).xleft;
@@ -224,7 +241,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 3: // N_INSTRUCTIONS ::= N_INSTRUCTION 
+          case 4: // N_INSTRUCTIONS ::= N_INSTRUCTION 
             {
               LinkedList<Node> RESULT =null;
 		Location instructionxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
@@ -243,7 +260,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 4: // N_INSTRUCTION ::= N_READ_INSTRUCTION 
+          case 5: // N_INSTRUCTION ::= N_READ_INSTRUCTION 
             {
               Node RESULT =null;
 		Location readInstructionxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
@@ -257,7 +274,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 5: // N_INSTRUCTION ::= N_PRINT_INSTRUCTION 
+          case 6: // N_INSTRUCTION ::= N_PRINT_INSTRUCTION 
             {
               Node RESULT =null;
 		Location printInstructionxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
@@ -271,7 +288,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 6: // N_READ_INSTRUCTION ::= N_PRIME_VARIABLES_DECLARATION T_EQUALS T_READ T_LEFT_PARENTHESIS T_INTEGER T_RIGHT_PARENTHESIS 
+          case 7: // N_READ_INSTRUCTION ::= N_PRIME_VARIABLES_DECLARATION T_EQUALS T_READ T_LEFT_PARENTHESIS T_INTEGER T_RIGHT_PARENTHESIS 
             {
               Node RESULT =null;
 		Location variablesDeclarationxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.elementAt(CUP$SyntacticAnalyzer$top-5)).xleft;
@@ -298,7 +315,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 7: // N_PRIME_VARIABLES_DECLARATION ::= N_VARIABLES_DECLARATION 
+          case 8: // N_PRIME_VARIABLES_DECLARATION ::= N_VARIABLES_DECLARATION 
             {
               Node RESULT =null;
 		Location variablesDeclarationxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
@@ -313,7 +330,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 8: // N_VARIABLES_DECLARATION ::= N_VARIABLES_DECLARATION T_COMMA T_IDENTIFIER 
+          case 9: // N_VARIABLES_DECLARATION ::= N_VARIABLES_DECLARATION T_COMMA T_IDENTIFIER 
             {
               LinkedList<Node> RESULT =null;
 		Location variablesDeclarationxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.elementAt(CUP$SyntacticAnalyzer$top-2)).xleft;
@@ -335,7 +352,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 9: // N_VARIABLES_DECLARATION ::= T_IDENTIFIER 
+          case 10: // N_VARIABLES_DECLARATION ::= T_IDENTIFIER 
             {
               LinkedList<Node> RESULT =null;
 		Location identifierxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
@@ -357,7 +374,7 @@ class CUP$SyntacticAnalyzer$actions {
           return CUP$SyntacticAnalyzer$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 10: // N_PRINT_INSTRUCTION ::= T_PRINT T_IDENTIFIER 
+          case 11: // N_PRINT_INSTRUCTION ::= T_PRINT T_IDENTIFIER 
             {
               Node RESULT =null;
 		Location identifierxleft = ((java_cup.runtime.ComplexSymbolFactory.ComplexSymbol)CUP$SyntacticAnalyzer$stack.peek()).xleft;
