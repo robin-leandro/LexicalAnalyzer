@@ -14,6 +14,7 @@ package cr.ac.ucr.ci1322;
 %line
 %column
 %eofval{
+    System.exit(0);
 %eofval}
 
 %{
@@ -38,4 +39,4 @@ termino  = -?[a-zA-Z_]\w*
     {termino}                       {System.out.println(yytext()+" es un término.");}
 }
 
-[^]                                 { System.out.println(yytext()+ " no es útil.");}
+[^]                                 { System.out.println(yytext()+ " no es relevante.");}

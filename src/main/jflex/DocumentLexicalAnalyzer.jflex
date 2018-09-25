@@ -14,6 +14,7 @@ package cr.ac.ucr.ci1322;
 %line
 %column
 %eofval{
+    System.exit(0);
 %eofval}
 
 %{
