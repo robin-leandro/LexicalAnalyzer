@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         FileReader reader = null;
         try{
-            reader = new FileReader(".src/main/resources/ejemplo_documento.txt");
+            reader = new FileReader("./src/main/resources/ejemplo_documento.txt");
         }catch(FileNotFoundException e){
             e.printStackTrace();
 
