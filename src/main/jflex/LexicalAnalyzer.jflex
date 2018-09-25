@@ -67,25 +67,21 @@ import java_cup.runtime.Symbol;
     }
 %}
 
-newlines     = [\r\n]+
-identifier  = -?[a-zA-Z_]\w*
-integer     = \d+
-read        = read
-print       = print
+andOperator = AND
+orOperator = OR
+notOperator = NOT
+preposicion = a|ante|bajo|con|de|desde|durante|en|entre|excepto|hacia|hasta|mediante|para|por|salvo|según|sin|sobre|tras
+articulo = el|las?|los?|uno?|unos|una?|unas
+termino  = \D\w{3,30}\b
 
 %% // fin de options and declarations, inicio de lexical rules
 <YYINITIAL> {
-    {read}                          {return symbol(Terminal.T_READ);}
-    {print}                         {return symbol(Terminal.T_PRINT);}
-    {identifier}                    {return symbol(Terminal.T_IDENTIFIER,yytext());}
-    {integer}                       {return symbol(Terminal.T_INTEGER,new Integer(yytext()));}
-    "="                             {return symbol(Terminal.T_EQUALS);}
-    "("                             {return symbol(Terminal.T_LEFT_PARENTHESIS);}
-    ")"                             {return symbol(Terminal.T_RIGHT_PARENTHESIS);}
-    ","                             {return symbol(Terminal.T_COMMA);}
-    " "                             {;}
-    {newlines}                      {return symbol(Terminal.T_NEWLINES);}
-    [^]                             { System.out.println("Lexical error: unknown token "+yytext());ok=false;}
+    {preposicion}                   {System.out.print(yytext()+" es una preposicion");}
+    {articulo}                      {System.out.print(yytext()+" es un articulo");}
+    {andOperator}                   {System.out.print(yytext()+" es un operador AND");}
+    {orOperator}                    {System.out.print(yytext()+" es un operador OR");}
+    {notOperator}                   {System.out.print(yytext()+" es un operador NOT");}
+    {termino}                       {System.out.print(yytext()+" es un termino");}
 }
 
 [^]                                 { System.out.println("Lexical error: unknown token "+yytext());ok=false;}
