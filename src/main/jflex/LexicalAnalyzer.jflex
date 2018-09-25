@@ -17,7 +17,11 @@ package cr.ac.ucr.ci1322;
 %eofval}
 
 %{
+    private boolean isDocument = false;
 
+    public void setIsDocument(boolean isDocument) {
+        this.isDocument = isDocument;
+    }
 %}
 
 space = \s+
@@ -33,9 +37,21 @@ termino  = -?[a-zA-Z_]\w*
     {space}                         {;}
     {preposicion}                   {System.out.println(yytext()+" es una preposición.");}
     {articulo}                      {System.out.println(yytext()+" es un artículo.");}
-    {andOperator}                   {System.out.println(yytext()+" es un operador de conjunción.");}
-    {orOperator}                    {System.out.println(yytext()+" es un operador de disyunción.");}
-    {notOperator}                   {System.out.println(yytext()+" es un operador de negación.");}
+    {andOperator}                   {if(this.isDocument){
+                                        System.out.println(yytext()+" es un término.");
+                                    } else {
+                                        System.out.println(yytext()+" es un operador de conjunción.");
+                                    }}
+    {orOperator}                   {if(this.isDocument){
+                                        System.out.println(yytext()+" es un término.");
+                                    } else {
+                                        System.out.println(yytext()+" es un operador de disyunción.");
+                                    }}
+    {notOperator}                   {if(this.isDocument){
+                                        System.out.println(yytext()+" es un término.");
+                                    } else {
+                                        System.out.println(yytext()+" es un operador de negación.");
+                                    }}
     {termino}                       {System.out.println(yytext()+" es un término.");}
 }
 
