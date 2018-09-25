@@ -1,14 +1,483 @@
-uno, dos, tres, cuatro = read(4)
+Steven (cantando): Mamá era un Diamante que la Tierra invadió. Vio su belleza y su valor. Formó un ejército y también peleó. Y le dio tal importancia que fingió su destrucción. Mi madre escondida se llamaba Rose. Y con nuevos amigos su forma cambió. Lo que queda de ella ahora vive en mí. Y creo que podemos juntos convivir. Eso nos preocupa un poco. Es mejor pensar en...
 
+(Steven sale del baño)
 
-print cuatro
+Steven (cantando): ¡La boda! Pensemos en pastel. Pensemos en flores. Pensemos en vestirnos bien para bailar por horas. Y es que hay un montón de cosas y mucho en qué pensar. Y por eso pensemos solo en amor.
 
-cinco,seis,siete = read(3)
+(Steven deja de cantar.)
 
-print siete
-print seis
-print cinco
-print cuatro
-print tres
-print dos
-print uno
+Rubí: Muy bien, Zafiro, tengo que vestirme para nuestro gran día, así que no espíes, y sin visión futura tampoco.
+
+Zafiro: (se ríe) Está bien.
+
+Perla: Oh, Steven, ojalá hubiera dicho algo antes acerca de Rose y Rosa.
+
+(Steven vuelve a cantar.)
+
+Steven (cantando): En mentiras de ayer, eso podemos pensar.
+
+Perla: Les cayó tan mal...
+
+Steven (cantando): Y pensar en cuánto duelen y cuánto pueden durar...
+
+Perla: ¿Cómo continuar?
+
+Steven (cantando): Pensar en la esperanza.
+
+Perla: ¿Esperanza?
+
+Steven (cantando): ¡Yo tengo esperanza!
+
+Perla: ¿Por qué?
+
+Steven (cantando): ¡Porque todo es mejor ahora que todo está a la vista!
+
+(Steven deja de cantar y sale de la casa.)
+
+Steven: ¡Bismuto! ¿Eso es lo que vas a usar para la boda?
+
+Bismuto: Es lo mejor que tengo.
+
+Steven: ¡Te ves elegante!
+
+(Steven vuelve a cantar y va hacia el altar donde está Amatista.)
+
+Steven (cantando): Pensaremos en flores. Y también en pastel. Pensaremos en las promesas que siempre podremos hacer. Y es que hay un montón de cosas y mucho en qué pensar. Y por eso pensemos solo en amor.
+
+Amatista: Quizá no debí haber recogido la rosa, puede ser un tanto polémica.
+
+Steven (cantando): Volvería a pensar qué opino de Rose. Cuando hablas de Rosa y las cosas de antes tan lejos no están.
+
+Amatista: Sí.
+
+Steven (cantando): Y sentirnos mejor porque pensamos en cómo nos sentimos los dos y cómo pensamos hoy.
+
+Amatista: Si no usamos estas vamos a necesitar otras.
+
+(Steven deja de cantar.)
+
+Steven: Sin preocupaciones. Peridot está recogiendo más flores ahora mismo, la iré a buscar.
+
+(Steven va por el portal al lugar donde está el cráter del Granero. Vuelve a cantar.)
+
+Steven (cantando): Y por eso pensemos solo en a...
+
+(Steven deja de cantar y camina hacia Peridot.)
+
+Steven: ¿Peridot?
+
+Peridot: ¿Qué tal si Lapis estaba en lo cierto? Tarde o temprano las Diamantes van a venir por el Cluster. ¡Todos vamos a morir aquí!
+
+Steven: Pensemos en la guerra. Pensemos en la lucha. Y en los viejos amigos que también querrían estar. (Se enfoca a Lapis en la luna) Pensemos en las Gemas rotas y en el Cluster del planeta y más. (Se enfoca al Cluster) O pensar en la burbuja que hicimos para que las escuchen y no tengan que sufrir nunca más. (Steven toma la mano de Peridot y van hacia el portal) Pensemos en alegría. Y también en dolor. Y en el brillo del sol. Y la lluvia caer. (Llegan a la casa a través del portal) Y es que hay un montón de cosas en las que puedes pensar. Pero solo un día pensemos en el a...
+
+Bismuto, Peridot, Amatista, Connie, Greg y Perla (cantando): Solo un día pensemos en el a... Solo un día pensemos en el a...
+
+Steven (cantando): ¡-mor!
+
+(Steven baja a la playa flotando hacia al altar, luego bajan los otros)
+
+Steven: ¿Nerviosa?
+
+Zafiro: No lo estoy. (rompe un hielo)
+
+(Todos caminan hacia al altar mientras Greg toca con su guitarra una versión instrumental de “Más fuerte que tú”.)
+
+Peridot: ¡Flores para ti! (arroja una flor) ¡Flores para ti! (arroja otra) ¡Flores para ti! (arroja una flor y le da a Fryman) Comandante de la boda, ¡las flores han sido desplegadas!
+
+Steven: Gracias, Peridot...
+
+(Rubí sale de la casa con su vestido de novia, se emociona y va corriendo hacia el altar) (Greg se apresura a tocar más rápido la guitarra) (Rubí llega al altar creando una bola de fuego) (Amatista procede a apagarlo).
+
+Steven: (Tose) Queridas y amadas Gemas, humanos, leones grandes y pequeños, calabazas vivientes, Cebolla. Estamos reunidos aquí para celebrar a Rubí y Zafiro, dos de mis personas favoritas, que combinadas hacen a otra persona favorit. Seguro la conocen como Garnet, ella es amor, en otra forma, pero ahora es su turno de hablar sobre eso.
+
+Rubí: Sé que esto es un poco tonto, digo, hemos estado juntas por 5.750 años.
+
+Zafiro: Y 8 meses.
+
+Rubí: Solía pensar que no era buena solo estando por mi cuenta, pero cuando estamos juntas siento que-que está bien solo ser yo, así que quiero ser yo contigo, y-y ni siquiera las Diamantes se interpondrán, y si lo intentan las patearemos.
+
+(Zafiro se ríe.)
+
+Zafiro: Rubí, mi futuro solía verse como un sueño sencillo y obvio, igual hasta el fin de los tiempos, en un instante, me sacaste de ese destino y me abriste los ojos a una explosión de posibles e infinitos futuros que surgen el espacio y el tiempo, cambiando y mutando ante el más mínimo vaivén de la voluntad.
+
+(Steven y Rubí se sonrojan.)
+
+Zafiro: Quiero decir que cambiaste mi vida, y después yo cambié la tuya y ahora cambiamos nuestras vidas.
+
+Steven: ¡Bismuto, los anillos!
+
+Amatista: Oye, Bismuto, vas tú.
+
+(Bismuto está llorando de alegría y entrega los anillos a Zafiro y Rubí quienes se los ponen.)
+
+Steven: Rubí, ¿aceptas a esta Gema para querer y respetar en este y los otros planetas en el universo?
+
+Rubí: ¡Acepto!
+
+Steven: ¿Y Zafiro aceptas..?
+
+Zafiro: Sí.
+
+Steven: ¡No me dejaste terminar!
+
+Zafiro: Estoy muy emocionada.
+
+Steven: Entonces por el poder que me otorga el estado de Delmarva las declaro... ¡Garnet!
+
+(Rubí y Zafiro se besan y se fusionan en Garnet.)
+
+(Se enfoca a un par de flores en el mar, mientras que todos aplauden) (Luego se enfoca a una pista de baile) (Garnet tira su ramo de flores muy arriba que no se lo llega a visualizar) (Sadie, Connie, Jenny y Kiki se asombran de tal lanzamiento) (Se enfoca a Crema Agria de DJ mientras que Jenny y Buck están bailando) (luego a Garnet, quien está emocionada comienza a bailar, mientras que Jamie se encuentra triste) (luego se enfoca a Nanefua junto a sus guardaespaldas quienes realizan un baile en conjunto, algo que hace que Mr. Dewey se ponga triste) (Por la tristeza que los une, Dewey y Jamie bailan mientras lloran) (Se enfoca a Kiki y a Perla hablando) (Se muestra a Amatista y a Vidalia hablando mientras que Peridot mira con extrañez y desagrado a Cebolla) (Bismuto y Ronaldo también hablan) (Mientras que Steven está feliz es tomado por Garnet, quien prodece a alzarlo).
+
+Garnet: ¡Steven!
+
+(Se ríen ambos)
+
+Steven:  ¡Garnet!
+
+Garnet y Steven: ¡Gracias por todo! (Se ríen) ¡Eso fue muy…! (Vuelven a reírse)
+
+Garnet: Qué idea tan maravillosa, lograron que la decisión de un instante dure para siempre, no necesito visión del futuro para saberlo…
+
+(Se enfoca a Perla, Amatista y Bismuto, esta última obtiene el ramo de flores de Garnet y Amatista se ríe)
+
+Steven: Estoy tan feliz…
+
+(Steven llora de alegría)
+
+Garnet: ¡Oh no! Lo siento, no llores.
+
+Steven: Creo que verlos a todos juntos realmente me emocionó (llora sin intención), espera un segundo, ¡¿no crees que…?!
+
+(Garnet se quita los lentes y abre su tercer ojo)
+
+Garnet: Diamante Azul…
+
+Steven: ¡¿Ella está aquí?!
+
+Garnet: ¡Y no está sola!
+
+(El cielo se oscurece, todos se sorprenden) (Connie va corriendo hacia Garnet y Steven)
+
+Steven: Oh no…
+
+(Las Diamantes surgen de una nube con sus naves)
+
+Steven: ¡Son las Diamantes!
+
+(Todos corren) (Steven va hacia Nanefua)
+
+Steven: ¡Nanefua!, ¡habla en tu Nanafono!, ¡tenemos un código azul y un código amarillo!
+
+(Se enfocan a las Naves de las Diamantes bajando del cielo)
+
+Garnet: ¡Ahora sí!…
+
+(Las naves pasan de las Crystal Gems)
+
+Peridot: ¡Estamos aquí, tontas!
+
+Perla: ¡Ah!, ¡¿A dónde van?!
+
+(Las naves se dirigen la zona del cráter del granero)
+
+Steven: Si no están aquí por nosotros, ¡Están por el Cluster!, (La Tierra tiembla) ¡Ah!
+
+Bismuto: ¿Qué es el Cluster?
+
+Steven: ¡Es una inmensa geoarma destructora que las Diamantes hicieron con un Sere Millón de Gemas!
+
+(La nave de Diamante Amarillo rompe el suelo)
+
+Steven: ¡Debo mantenerlo calmado y en su burbuja!, ¡puedo usar la mente para conectarme con el Clúster, pero solo cuando estoy dormido!
+
+Bismuto: ¡¿Dormido?!
+
+(Steven trata de dormir, pero se despierta por los golpes)
+
+Steven: ¡Es inútil!, ¡¿Cómo voy a dormir con todo este ruido?!
+
+Greg: ¿Te ayudaría una canción de cuna?
+
+Connie: Ah... no creo que sirva...
+
+(Steven se duerme y Connie se queda sorprendida)
+
+Steven: (a través de telepatía onírica) ¡El Clúster! Cálmate, cálmate, no trates de formarte, ¡no, no, NO! (el Clúster empieza a formarse)
+
+Steven: ¡Explotó!
+
+(Todos salen afuera y se forma un brazo del Clúster)
+
+Nanefua: ¡Atención ciudadanos de Ciudad Playa cada uno dírijase hacia su refugio designado! ¡Repito: esto no es un simulacro! ¡Vayan a sus refugios! (Ronaldo intenta atacar al Clúster y Peedee se lo lleva)
+
+(El Clúster golpea la nave de Diamante Amarillo y le alza el pulgar a Steven)
+
+Steven: ¡Muy bien! Parece que puede controlarse y está de nuestro lado.
+
+(El Clúster y la nave de Diamante Amarillo empiezan a jugar una lucha de manos, la nave de Diamante Azul se acerca y Diamante Azul aparece)
+
+Garnet: Diamante Azul.
+
+Greg: Creo que es hora de poner a funcionar el viejo hechizo del universo.
+
+Todos: ¡No!
+
+Greg: Muy bien, estaré aquí dentro (se mete adentro de la casa).
+
+Diamante Azul: Rose Cuarzo... veo que escapaste del Planeta Madre y te arrastraste hasta aquí (llorando) ¡Este es mundo de Rosa! ¡¿Cómo te atreves a usarlo como tu escondite?! ¡Vamos, responde por lo que haz hecho!
+
+Peridot: Esto es malo, esto es malo, esto es malo, ¡esto es malo!
+
+Bismuto: ¡Vamos, rocas! (hacer un martillo con su mano izquierda) Pongámosla en una burbuja.
+
+Garnet, Amatista y Perla: (invocan sus armas) ¡Bien!
+
+Steven: Esperen, no hay razón para pelear (se acomoda el moño) déjenme hablar con ella. (se acerca a Diamante Azul) ¡Diamante Azul! Por favor escúchame, yo no destrocé a Diamante Rosa, Diamante Rosa está aquí. Es.. bastante interesante cuando piensas en ello.
+
+Diamante Azul: (le lanza una bola de energía) ¡SUFICIENTE!
+
+(Alejandrita atrapa a Steven)
+
+Steven: ¡Espera!
+
+Diamante Azul: ¡No puedes comprender cuánto he llorado... lo que miles de años de dolor me han hecho! (usa su aura de tristeza, desfusionando a Alejandrita y dejando indefensos a todos mientras lloran excepto a Connie, a quien no le afecta)
+
+Connie: ¿Qué está pasando...? ¿Chicos? (llama a León y salta sobre él) ¡Resistan, chicos!
+
+Steven: Connie...
+
+(León salta y Connie se le lanza encima a Diamante Azul para atacarla con la espada, pero Diamante Azul la detiene con su mano atrapando la espada)
+
+Diamante Azul: Conozco esta espada... esta es la espada ¡QUE DESTROZÓ A ROSA! (quiebra la espada y Connie cae y León la atrapa) se lo merecen... todos ustedes.
+
+Steven: ¡Alto, por favor!
+
+Amatista: ¡Steven!
+
+Perla: ¿Qué hacemos?
+
+Steven: No lo sé, no nos escucha, solo quiere pelear.
+
+Garnet: (dirigiéndose hacia Diamante Azul) ¡Diamante Azul!
+
+Diamante Azul: ¿Quién se supone que eres?
+
+Garnet: Soy el deseo de dos gemas de cuidarse una a otra, de protegerse mutuamente de cualquier amenaza sin importar qué tan basta o qué tan cruel sea. Tú no pudiste detenerme hace 5750 años y no puedes detenerme ahora.
+
+Diamante Azul: Ustedes... son aquella Rubí y Zafiro que perturbaron mi corte.
+
+Garnet: (golpea sus pies) ¡Este debía ser mi día!
+
+Diamante Azul: ¿Y tú esperas derrotarme colgándote a mis pies?
+
+Garnet: (sonriendo) Solo tenía que evitar que dieras tres pasos hacia la derecha.
+
+(Unas gotas comienzan a caer sobre Azul y se ve que es Lapislázuli, quien le arroja el granero encima)
+
+Diamante Azul: ¿QUÉ?
+
+(Garnet retrocede, después de que Azul fue aplastada por el granero, así desapareciendo el efecto)
+
+Peridot: ¿¡Lapis!? (Se acera más a Lapislázuli) Realmente estás aquí.
+
+Lapislázuli: Hola.
+
+Steven: ¡Lapis! (la abraza, emocionalmente) regresaste, de nuevo.
+
+Lapislázuli: No podía estar tan lejos, si me van a castigar como a una gema, más vale que sea una, ¿cierto?, ¿tienen espacio para una más?
+
+Steven: (eufórico) ¡Por supuesto!
+
+Bismuto: (detiene el abrazo de Steven y Lapislázuli) Ahórrense los abrazos para después de la pelea.
+
+Diamante Azul: (Se libera del granero, destruyéndolo por completo. Molesta) ¡Lapislázuli! ¿Cada gema que entre en contacto con este planeta se convierte en TRAIDORA?
+
+(Usa su aura otra vez, pero Lapis ni se inmuta)
+
+Diamante Azul: ¿Qué?
+
+Lapislázuli: (se quita una pequeña lágrima) Me he sentido peor (la ataca atándola con cadenas de agua en las manos) ¡Sáquenla de la playa!
+
+Garnet: ¡Ahora o nunca! (invoca sus guanteletes)
+
+(Todos los demás invocan sus armas o se preparan para luchar)
+
+Garnet: Uniendo nuestra fuerza podemos derrotarla.
+
+Steven: Así es. Este es nuestro hogar, nuestro planeta, nuestros amigos y familia. (Alza su escudo) ¡SOMOS LAS GEMAS DE CRISTAL!
+
+Diamante Azul: (se deshace de las cadenas) ¡PATÉTICO! ¡Ustedes no son NADA! (lanza unos rayos de energía y Steven cubre a todos con el escudo y trata de mantenerlo con esfuerzo y lo logra junto a todos)
+
+(Steven levanta el escudo y Connie ataca a Diamante Azul con una onda supersónica de León, Amatista utiliza su látigo, Lapislázuli la ata, Perla usa su tridente, Connie pasa encima de su cabeza, Bismuto y Garnet hacen un golpe en conjunto por la derecha, Peridot le lanza latas con su telequinesis)
+
+Peridot: ¡Oye Diamante Azul, pelea conmigo!
+
+Bismuto: Tienes valor pequeñita, déjame darte una mano (la arroja contra Diamante Azul y Peridot cae en su rostro)
+
+Steven: ¡Todos agrúpense!
+
+(Lapislázuli los envuelve en una burbuja, toma impulso y los lanza contra Diamante Azul, Bismuto la golpea, seguido del tridente de Perla, el látigo de Amatista, León le lanza una onda, Garnet la golpea con guanteletes gigantes y derriba su defensa y Steven remata con su burbuja con picos, haciendo caer a Azul de rodillas)
+
+(El Clúster y la de nave de Amarillo siguen peleando hasta que el Clúster hace que la nave empiece a sacar humo)
+
+Steven: Eh, chicos...
+
+(El Clúster levanta la nave de Amarillo después de defectuarla)
+
+Steven: ¡Corran! (Todos los miembros se alejan del lugar)
+
+(El Clúster arroja la nave contra la otra y aplasta a Azul y algunos pedazos de ambas naves salen despedidos hacia la casa)
+
+Perla: ¡La casa!
+
+Bismuto: No te preocupes, puedo arreglarlo.
+
+Steven: ¡MI PAPÁ!
+
+Greg: (sale de la casa con Gato Steven) ¡Muy bien, estoy con ustedes chicos!
+
+Connie: ¿Lo logramos?
+
+Steven: ¡Clúster! ¡Estuviste increíble! ¿Estás bien? ¿Quieres volver a tu burbuja? (El Clúster alza el pulgar) bien, con calma, eres el mejor. (El Clúster se va)
+
+Garnet: Así que esto es una recepción de bodas (le toca el cabello a Steven) eres un gran planificador de bodas.
+
+Amatista: ¿Vieron eso? ¡No me pudo poner un dedo encima!
+
+Peridot: ¡¿Pero vieron lo que salió mi trayectoria justo hacia sus ojos?! ¡Lo demostraré, láncenme de nuevo! (se echa encima de Bismuto)
+
+Bismuto: Tú me agradas Peridot, no te rindes.
+
+(Diamante Amarillo sale de su nave y libera a Diamante Azul)
+
+Peridot: Ja, ya la derribé una vez. Puedo hacerlo de nuevo. (Corre hacia las Diamantes) ¡Oye, tonta Amarilla! ¿Me recuerdas?
+
+Diamante Amarillo: No (devuelve a su gema a Peridot destruyendo su forma física con su rayo)
+
+Steven: ¡Alto! (Corre hacia las Diamantes) No hagan esto, escúchenme, yo soy el que falta, ¡soy Diamante Rosa!
+
+Diamante Amarillo: ¡Tú! (corre hacia él para aplastarlo)
+
+(Steven activa su escudo)
+
+Garnet: ¡Steven!
+
+(Amarillo pisotea a Steven. Se oscurece y luego Steven abre los ojos)
+
+Connie: ¡Steven!
+
+Steven: ¡Connie! ¿Qué sucede?
+
+Connie: Vamos, por favor despierta.
+
+Steven: Estoy despierto, estoy despierto. ¿Qué pasa? (se sienta y deja una especie de aura) Connie, estoy justo aquí.
+
+Connie: Vamos Steven, te necesitamos.
+
+(Steven se da cuenta de que "salió" de su cuerpo)
+
+Steven: ¿Qué sucede? (se mira a sí mismo) Bien, esto es nuevo. ¿Qué es este lugar?
+
+(Se ven una especie de estatuas, a Connie y a las demás)
+
+Lapislázuli: ¿Qué más tienes? Apenas acabo de comenzar a pelear (Diamante Amarillo la devuelve a su gema)
+
+Steven: ¡Lapis! ¿Connie estás viendo esto?
+
+Connie: ¡Despierta, por favor! (en sus pensamientos) debemos estar en esto juntos, ¿recuerdas?
+
+Steven: Connie, estoy bien...
+
+Connie: ¿Steven?
+
+Steven: (toma su mano) ¡Connie! Soy yo.
+
+Connie: ¿Qué? ¿Dónde estás? ¿Cómo es que...?
+
+Steven: No estoy seguro, pero creo que es una clásica situación psíquica de fantasma.
+
+Connie: Ah, ¡por supuesto! Entonces, ¿cuál es el plan?
+
+Steven: Las diamantes no me escucharán afuera, pero quizá me escuchen aquí. Tienen que saber que Diamante Rosa no fue destrozada, por favor cuida mi cuerpo mientras no esté.
+
+Connie: Entendido, buena suerte allá afuera, Steven.
+
+(Steven salta hacia Garnet)
+
+Garnet: (en sus pensamientos) Ahora sí tengo que lograrlo, tengo que mantener a todo el mundo unido.
+
+Steven: Tú puedes hacerlo Garnet, ¡recuerda estás hecha (la atraviesa) de amor!
+
+Garnet: ¿Steven? (en sus pensamientos) ¡Ah! Siempre lleno de sorpresas (golpea más veces).
+
+Amatista: (agitando su látigo) (en sus pensamientos) No te destroces, no te destroces, no te destroces.
+
+Steven: (la atraviesa) Tú puedes hacerlo Amatista, creo en ti.
+
+Amatista: (en sus pensamientos. Con latigazos más fuertes) ¡Puedo hacerlo, puedo hacerlo, puedo hacerlo!
+
+Perla: (usando su tridente) (en sus pensamientos) No me rendiré. Todo lo que hago, lo hago por ella, lo hago por él.
+
+Steven: (la atraviesa) ¡No te olvides de ti, Perla!
+
+Perla: (usando su tridente) (en sus pensaminetos) ¡Lo hago por mí!
+
+Bismuto: (en sus pensamientos) Acabo de recuperar a mis amigos y ahora, ¿los voy a perder de nuevo?
+
+Steven: Aún podemos hacerlo (la atraviesa) ¡juntos!
+
+Bismuto: (en sus pensamientos) ¿En qué estoy pensando? Aún no hemos perdido.
+
+Steven: (sobre la gema de Peridot. Mirándola y luego a la de Lapislázuli) Resiste Peridot, tú también Lapis.
+
+(Salta hacia las diamantes)
+
+Diamante Amarillo: (en sus pensamientos. Frustrada) Qué miserable, sabía que Rosa no podía manejar su propia colonia pero se la di. Y ahora soy culpable por su destino.
+
+(Su aura repele a Steven)
+
+Steven: Sus pensamientos son muy fuertes.
+
+Diamante Azul: (en sus pensamientos. Triste) ¿De qué servirá todo esto? Mientras más hago sufrir a estas gemas más falta me hace verte, Rosa (lagrimea)
+
+(Su aura repele a Steven pero Steven lo intenta de nuevo y la alcanza)
+
+Steven: Casi... (toca a Azul) ¡Diamante Azul, por favor escucha! (se repela)
+
+Diamante Azul: Yo sentí algo, a alguien.
+
+Steven: Funcionó, tienen que escucharme. (Vuelve a llegar con ella, tocándola de nuevo) ¡Rosa no se ha ido, puedo explicarlo todo si dejan de pelear!
+
+(Steven es expulsado)
+
+Diamante Azul: Ahí está de nuevo.
+
+Diamante Amarillo: ¿De qué estás parloteando?
+
+Diamante Azul: Una presencia. Se siente como...
+
+Diamante Amarillo: Por favor Azul, estás histérica. Más de lo normal.
+
+Steven: (Tocando a Amarillo) Escucha Amarillo, el destino de Rosa es diferente de lo que piensas... ¡fingió su destruccióoooon! (Steven es expulsado otra vez)
+
+Diamante Azul: (se pone en guardia con Amarillo) ¡Esa sensación! ¡La conozco!
+
+Diamante Amarillo: Debe ser un truco. ¡Muéstrate, enemigo!
+
+Steven: ¡No soy su enemigo, por favor escúchenme!
+
+Diamante Amarillo: ¡Allá! (atacan a Steven con sus auras)
+
+Steven: (activa un aura) (en sus pensamientos) Por favor, la guerra debe terminar. No somos enemigos, somos familia. Por favor escúchenme, ¡necesito que me vean por quién SOOOOOOY! (lanza un aura a las Diamantes)
+
+Diamante Azul: (sorprendida) Imposible.
+
+Diamante Amarillo: (soreprendida) Esta aura...
+
+(Las Diamantes toman en sus manos a Steven) (Termina el ensueño)
+
+(Steven despierta sorprendido y todos se le quedan viendo)
+
+Diamante Azul: (llorando y sorprendida) ¡Eres tú! (enfocando al Diamante de Steven) ¡Rosa!
+
+(Fin del episodio)
